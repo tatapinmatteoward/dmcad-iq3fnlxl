@@ -1,0 +1,65 @@
+---
+const slides = [
+  {
+    image: "/images/slide1.jpg",
+    title: "DMCA Defense Network",
+    subtitle: "America's Premier DMCA Defense Network",
+    description: "US-Based Legal Expertise | Coast-to-Coast Protection | Federal Copyright Law Specialists"
+  },
+  {
+    image: "/images/slide2.jpg",
+    title: "Protect Your Digital Rights",
+    subtitle: "Expert DMCA Defense Solutions",
+    description: "Comprehensive Protection | Rapid Response | Proven Results"
+  },
+  {
+    image: "/images/slide3.jpg",
+    title: "Nationwide Coverage",
+    subtitle: "Coast-to-Coast Legal Support",
+    description: "Local Expertise | Federal Knowledge | Complete Protection"
+  }
+];
+---
+
+<div class="relative w-full h-[600px] overflow-hidden">
+  {slides.map((slide, index) => (
+    <div class="absolute inset-0 w-full h-full transition-opacity duration-1000 slide-item">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <img 
+        src={slide.image} 
+        alt={slide.title} 
+        class="object-cover w-full h-full"
+      />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center text-white z-10 px-4">
+          <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+            {slide.title}
+          </h1>
+          <p class="text-xl md:text-2xl mb-4 font-light tracking-wide">
+            {slide.subtitle}
+          </p>
+          <p class="text-lg md:text-xl mb-10 font-light">
+            {slide.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .slide-item {
+    opacity: 0;
+    animation: slideshow 15s infinite;
+  }
+
+  .slide-item:nth-child(1) { animation-delay: 0s; }
+  .slide-item:nth-child(2) { animation-delay: 5s; }
+  .slide-item:nth-child(3) { animation-delay: 10s; }
+
+  @keyframes slideshow {
+    0%, 26.66% { opacity: 1; }
+    33.33%, 93.33% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+</style>

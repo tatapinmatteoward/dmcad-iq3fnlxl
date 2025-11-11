@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeroSlideshow from '../components/HeroSlideshow.astro';
 
 const pageTitle = "DMCA Defense Network - Leading US Copyright Protection";
 const pageDescription = "America's trusted DMCA defense network. US-based experts providing comprehensive copyright protection and DMCA defense strategies for creators nationwide.";
@@ -47,19 +48,10 @@ const testimonials = [
 <Layout title={pageTitle} description={pageDescription}>
   <div class="min-h-screen">
     {/* Hero Section */}
-    <section class="relative bg-gradient-to-br from-primary to-accent py-24 md:py-32 overflow-hidden">
-      <div class="absolute inset-0 bg-black opacity-10"></div>
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-            DMCA Defense Network
-          </h1>
-          <p class="text-xl md:text-2xl text-white/90 mb-4 font-light tracking-wide">
-            America's Premier DMCA Defense Network
-          </p>
-          <p class="text-lg md:text-xl text-white/80 mb-10 font-light">
-            US-Based Legal Expertise | Coast-to-Coast Protection | Federal Copyright Law Specialists
-          </p>
+    <section class="relative overflow-hidden">
+      <HeroSlideshow />
+      <div class="absolute bottom-0 left-0 right-0 z-20 pb-12">
+        <div class="container mx-auto px-4">
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Expert Guidance
