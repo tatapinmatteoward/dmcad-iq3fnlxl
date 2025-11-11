@@ -1,42 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "DMCA Defense Network - Home";
-const pageDescription = "Empowering creators with expert DMCA defense strategies to protect your intellectual property and fight copyright infringement effectively.";
+const pageTitle = "DMCA Defense Network - Leading US Copyright Protection";
+const pageDescription = "America's trusted DMCA defense network. US-based experts providing comprehensive copyright protection and DMCA defense strategies for creators nationwide.";
 
 const benefits = [
   {
-    title: "Expert Consultation",
-    description: "Personalized advice from DMCA specialists.",
-    icon: "fas fa-user-tie"
+    title: "US Legal Expertise",
+    description: "Direct access to American DMCA specialists and copyright attorneys.",
+    icon: "fas fa-balance-scale"
   },
   {
-    title: "Counter-Notice Support",
-    description: "Step-by-step guidance for filing counter-notices.",
-    icon: "fas fa-file-alt"
+    title: "Nationwide Protection",
+    description: "Coast-to-coast coverage with expertise in US copyright law.",
+    icon: "fas fa-flag-usa"
   },
   {
-    title: "Community Shield",
-    description: "Join a network of creators defending their rights.",
-    icon: "fas fa-users"
+    title: "Federal Compliance",
+    description: "Full compliance with US federal DMCA regulations and procedures.",
+    icon: "fas fa-check-circle"
   }
 ];
 
 const testimonials = [
   {
-    quote: "The DMCA Defense Network helped me navigate a complex takedown notice and successfully protected my content.",
+    quote: "Their deep understanding of US copyright law helped me successfully defend against unfair DMCA claims.",
     author: "Sarah Johnson",
-    role: "Content Creator"
+    role: "Content Creator",
+    location: "New York, NY"
   },
   {
-    quote: "As a small business owner, I was terrified of copyright claims. This network gave me the tools to defend myself.",
+    quote: "As a California-based business owner, having local US experts handle my DMCA defense was crucial.",
     author: "Michael Chen",
-    role: "Entrepreneur"
+    role: "Tech Entrepreneur",
+    location: "San Francisco, CA"
   },
   {
-    quote: "The consultation service was invaluable in helping me understand my rights and options.",
+    quote: "Their expertise in federal copyright regulations made all the difference in protecting my work.",
     author: "Alex Rivera",
-    role: "Digital Artist"
+    role: "Digital Artist",
+    location: "Miami, FL"
   }
 ];
 ---
@@ -51,8 +54,11 @@ const testimonials = [
           <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
             DMCA Defense Network
           </h1>
-          <p class="text-xl md:text-2xl text-white/90 mb-10 font-light tracking-wide">
-            Empowering Creators with Expert DMCA Defense Strategies
+          <p class="text-xl md:text-2xl text-white/90 mb-4 font-light tracking-wide">
+            America's Premier DMCA Defense Network
+          </p>
+          <p class="text-lg md:text-xl text-white/80 mb-10 font-light">
+            US-Based Legal Expertise | Coast-to-Coast Protection | Federal Copyright Law Specialists
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -164,6 +170,7 @@ const testimonials = [
               <div>
                 <p class="font-bold text-gray-900">{testimonial.author}</p>
                 <p class="text-gray-600 text-sm">{testimonial.role}</p>
+                <p class="text-accent text-sm mt-1">{testimonial.location}</p>
               </div>
             </div>
           ))}
