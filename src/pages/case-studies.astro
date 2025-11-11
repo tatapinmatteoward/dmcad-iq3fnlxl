@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Case Studies | Digital Rights Law Group";
+const pageDescription = "Explore our successful case studies in digital rights and copyright protection. Learn how we've helped clients safeguard their intellectual property in the digital age.";
+
+const caseStudies = [
+  {
+    id: 1,
+    title: "Defending a Photographer's Copyright Against Unauthorized AI Training",
+    client: "Renowned Freelance Photographer",
+    challenge: "Client discovered their high-resolution images were being scraped and used to train AI models without permission, leading to derivative works that undermined their brand and revenue.",
+    approach: "We filed a swift DMCA takedown notice, negotiated with the AI company to remove the content, and initiated legal proceedings to establish precedent for AI training rights.",
+    outcome: "Successfully secured immediate removal of all unauthorized content, secured licensing agreement for future use, and established a new legal framework for protecting digital assets.",
+    icon: "fas fa-camera"
+  },
+  {
+    id: 2,
+    title: "Protecting a Musician's Digital Distribution Rights",
+    client: "Independent Music Artist",
+    challenge: "Unauthorized distribution of her complete album on multiple streaming platforms without consent, resulting in significant loss of revenue and brand dilution.",
+    approach: "We conducted thorough digital forensics to track distribution channels, filed copyright infringement notices with platforms, and pursued commercial licensing negotiations.",
+    outcome: "Secured $75,000 in damages, restored exclusive distribution rights, and helped the artist re-launch her brand with stronger digital protection.",
+    icon: "fas fa-music"
+  },
+  {
+    id: 3,
+    title: "Safeguarding a Software Developer's Intellectual Property",
+    client: "Independent Software Developer",
+    challenge: "Company copied and modified his proprietary software code, creating a competing product that captured his market share.",
+    approach: "We analyzed source code for similarities, documented intellectual property violations, and pursued both litigation and settlement negotiations.",
+    outcome: "Obtained injunction against infringing software, secured $200,000 settlement, and established stronger IP protections for future projects.",
+    icon: "fas fa-code"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="relative overflow-hidden">
+    {/* Hero Section */}
+    <div class="bg-gradient-to-r from-primary to-accent py-24">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Case Studies</h1>
+        <p class="text-xl text-white max-w-3xl mx-auto">
+          Explore our successful case studies in digital rights and copyright protection. 
+          Learn how we've helped clients safeguard their intellectual property in the digital age.
+        </p>
+      </div>
+    </div>
+
+    {/* Tagline */}
+    <div class="bg-white py-4 shadow-sm">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-primary font-medium italic">Expert Legal Guidance in Digital Rights and Copyright Protection</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Introduction Section */}
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-primary mb-6">Our Success Stories</h2>
+        <p class="text-lg text-gray-700">
+          At the Digital Rights Law Group, we pride ourselves on delivering results for clients navigating the complexities 
+          of digital rights and copyright law. Our case studies highlight real-world successes where we've protected 
+          intellectual property, defended against infringement, and empowered creators in the digital landscape.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Case Studies Grid */}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {caseStudies.map((study) => (
+          <div 
+            key={study.id}
+            class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="bg-accent text-white p-3 rounded-full mr-4">
+                  <i class={`${study.icon} text-xl`}></i>
+                </div>
+                <h3 class="text-xl font-bold text-primary">{study.title}</h3>
+              </div>
+              
+              <div class="mb-4">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                  {study.client}
+                </span>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-900 mb-2">The Challenge</h4>
+                <p class="text-gray-600">{study.challenge}</p>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-900 mb-2">Our Approach</h4>
+                <p class="text-gray-600">{study.approach}</p>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-900 mb-2">The Outcome</h4>
+                <p class="text-gray-600">{study.outcome}</p>
+              </div>
+              
+              <div class="mt-6 pt-4 border-t border-gray-200">
+                <button class="text-accent font-medium hover:text-primary transition-colors">
+                  Read Full Case Study <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Stats Section */}
+  <section class="py-16 bg-gradient-to-r from-primary to-blue-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold mb-2">250+</div>
+          <div class="text-lg">Cases Handled</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold mb-2">$5M+</div>
+          <div class="text-lg">In Damages Recovered</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold mb-2">98%</div>
+          <div class="text-lg">Client Satisfaction</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold mb-2">12</div>
+          <div class="text-lg">Years of Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Ready to Protect Your Digital Rights?</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+        Our team of experts is ready to defend your intellectual property in the digital landscape.
+        Let's discuss your specific needs.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-primary hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+          Schedule a Consultation
+        </button>
+        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+          Contact Our Team
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .case-study-card {
+    transition: all 0.3s ease;
+  }
+
+  .case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+</style>

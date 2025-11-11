@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "About DMCA Defense Network";
+const pageDescription = "Learn about our mission to empower creators with expert DMCA defense strategies, protecting intellectual property in the digital age.";
+
+const features = [
+  {
+    icon: "fas fa-shield-alt",
+    title: "Expert Legal Guidance",
+    description: "Our team of seasoned attorneys and digital rights specialists provide comprehensive legal advice tailored to your unique needs."
+  },
+  {
+    icon: "fas fa-file-alt",
+    title: "Specialized Takedown Services",
+    description: "Efficiently remove infringing content from platforms while maintaining legal compliance and protecting your rights."
+  },
+  {
+    icon: "fas fa-graduation-cap",
+    title: "Educational Resources",
+    description: "Access our extensive library of guides and tutorials to better understand copyright protection in the digital landscape."
+  }
+];
+
+const missionPoints = [
+  "Protecting creators from unauthorized use of their intellectual property",
+  "Providing comprehensive legal defense against DMCA violations",
+  "Educating the digital community on copyright best practices",
+  "Advancing digital rights through strategic legal advocacy"
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="relative overflow-hidden">
+    <!-- Hero Section with Gradient -->
+    <div class="relative bg-gradient-to-r from-primary to-accent py-24 md:py-32">
+      <div class="absolute inset-0 bg-black opacity-10"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            About DMCA Defense Network
+          </h1>
+          <p class="text-xl md:text-2xl text-white/90 font-serif max-w-2xl">
+            Empowering Creators with Expert DMCA Defense Strategies
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex flex-col md:flex-row gap-8 items-center mb-16">
+            <div class="md:w-1/3 flex justify-center">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-48 h-48 flex items-center justify-center text-gray-500">
+                <i class="fas fa-lock text-5xl text-primary"></i>
+              </div>
+            </div>
+            <div class="md:w-2/3">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to DMCA Defense Network</h2>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                At DMCA Defense Network, we stand at the forefront of digital rights protection. In an era where content creation thrives online, the Digital Millennium Copyright Act (DMCA) serves as a critical shield against infringement. But navigating its complexities can be daunting—that's where we come in.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200 shadow-sm">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+            <p class="text-gray-600 text-lg leading-relaxed mb-6">
+              We are dedicated to safeguarding the intellectual property of creators, innovators, and businesses worldwide. By providing specialized DMCA takedown services, legal consultations, and educational resources, we ensure your work remains protected from unauthorized use and distribution.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h4 class="text-xl font-semibold text-primary mb-3">Protecting Your Rights</h4>
+                <p class="text-gray-600">
+                  We understand that your creative work is your livelihood. Our team works tirelessly to defend your intellectual property across all digital platforms.
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h4 class="text-xl font-semibold text-primary mb-3">Expert Guidance</h4>
+                <p class="text-gray-600">
+                  With years of legal expertise, we provide actionable strategies that protect your content and prevent infringement before it happens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Sets Us Apart</h2>
+          <p class="text-xl text-gray-600">
+            Our comprehensive approach to DMCA defense gives creators the tools they need to protect their work.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div 
+              key={index} 
+              class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <i class={`fas ${feature.icon} text-2xl text-primary`}></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">{feature.title}</h3>
+              <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission Details Section -->
+    <div class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Commitment to Creators</h2>
+              <p class="text-gray-600 text-lg mb-6">
+                We believe that every creator deserves robust protection for their intellectual property. Our approach combines legal expertise with practical solutions to address the unique challenges of digital content protection.
+              </p>
+              <p class="text-gray-600 text-lg">
+                Through our network of legal professionals, we offer personalized defense strategies that adapt to the evolving landscape of digital rights.
+              </p>
+            </div>
+            <div class="md:w-1/2">
+              <div class="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-primary/10 h-full">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Core Values</h3>
+                <ul class="space-y-4">
+                  {missionPoints.map((point, index) => (
+                    <li key={index} class="flex items-start">
+                      <i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>
+                      <span class="text-gray-700">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="py-20 bg-gradient-to-r from-primary to-accent">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Protect Your Creative Work?</h2>
+          <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            Join thousands of creators who trust DMCA Defense Network to safeguard their intellectual property.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+              Get Started Today
+            </button>
+            <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .feature-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+</style>
+
+<script>
+  // Add scroll animation to elements
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card').forEach(card => {
+      observer.observe(card);
+    });
+  });
+</script>

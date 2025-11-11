@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Contact Us - DMCA Defense Network";
+const pageDescription = "Reach out to the DMCA Defense Network for expert guidance on protecting your creative work. We're here to empower creators with tailored DMCA strategies.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="relative overflow-hidden">
+    <!-- Hero Section with Gradient -->
+    <div class="bg-gradient-to-r from-primary to-accent py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+          Contact Us
+        </h1>
+        <p class="text-xl text-white/90 max-w-2xl mx-auto">
+          Empowering Creators with Expert DMCA Defense Strategies
+        </p>
+      </div>
+    </div>
+    
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+  </div>
+
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12 border border-gray-100">
+        <h2 class="text-2xl font-serif font-bold text-gray-800 mb-4">Get in Touch</h2>
+        <p class="text-gray-600 mb-6">
+          At the <span class="font-semibold text-primary">DMCA Defense Network</span>, we believe in empowering creators like you to safeguard your intellectual property with confidence. 
+          Whether you need advice on DMCA takedowns, copyright disputes, or strategic defense plans, our team of experts is ready to assist.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <div class="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl border border-primary/10">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <i class="fas fa-lightbulb text-primary text-xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-gray-800 mb-2">Expert Consultation</h3>
+            <p class="text-gray-600 text-sm">Receive personalized strategies from seasoned legal professionals.</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl border border-primary/10">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <i class="fas fa-bolt text-primary text-xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-gray-800 mb-2">Quick Response</h3>
+            <p class="text-gray-600 text-sm">We aim to reply within 24-48 hours.</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-primary/5 to-accent/5 p-6 rounded-xl border border-primary/10">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <i class="fas fa-lock text-primary text-xl"></i>
+            </div>
+            <h3 class="font-semibold text-lg text-gray-800 mb-2">Confidential Support</h3>
+            <p class="text-gray-600 text-sm">Your information is protected and handled with the utmost discretion.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-gray-100">
+          <h2 class="text-2xl font-serif font-bold text-gray-800 mb-6">Contact Information</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mr-4">
+                <i class="fas fa-envelope text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800">Email</h3>
+                <a href="mailto:info@dmcadefense.network" class="text-primary hover:underline">info@dmcadefense.network</a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mr-4">
+                <i class="fas fa-phone text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800">Phone</h3>
+                <p class="text-gray-600">+1 (555) 123-4567</p>
+                <p class="text-sm text-gray-500">Mon-Fri, 9 AM - 5 PM EST</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mr-4">
+                <i class="fas fa-map-marker-alt text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800">Address</h3>
+                <p class="text-gray-600">123 Creator Street, Digital City, CA 90210</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-gray-100">
+          <h2 class="text-2xl font-serif font-bold text-gray-800 mb-6">Send Us a Message</h2>
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-gradient-to-r from-primary to-accent text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity shadow-md">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  .gradient-border {
+    position: relative;
+    border-radius: 12px;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #2e7d32, #00695c, #2e7d32);
+    border-radius: 14px;
+    z-index: -1;
+  }
+  
+  .bg-primary {
+    background-color: #2e7d32;
+  }
+  
+  .bg-accent {
+    background-color: #00695c;
+  }
+  
+  .text-primary {
+    color: #2e7d32;
+  }
+  
+  .text-accent {
+    color: #00695c;
+  }
+  
+  .border-primary {
+    border-color: #2e7d32;
+  }
+</style>

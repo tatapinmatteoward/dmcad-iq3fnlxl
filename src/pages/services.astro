@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Our Services";
+const pageDescription = "Discover our comprehensive legal services in digital rights and copyright protection at Digital Rights Law Group. Expert guidance to safeguard your online presence and intellectual property.";
+const services = [
+  {
+    title: "Copyright Protection and Registration",
+    description: "Safeguard your creative works from unauthorized use.",
+    features: [
+      "Copyright registration with the U.S. Copyright Office and international bodies",
+      "Audit and strategy development to identify and protect your intellectual property portfolio",
+      "Enforcement actions against infringers"
+    ],
+    icon: "fas fa-file-contract"
+  },
+  {
+    title: "Digital Rights Advocacy",
+    description: "Defend your online rights in an increasingly complex digital landscape.",
+    features: [
+      "Privacy law compliance consulting",
+      "Data protection and cybersecurity legal advice",
+      "Platform-specific rights advocacy"
+    ],
+    icon: "fas fa-shield-alt"
+  },
+  {
+    title: "Intellectual Property Management",
+    description: "Strategic portfolio development and protection for your digital assets.",
+    features: [
+      "Comprehensive IP audits and risk assessments",
+      "Licensing agreements and commercialization strategies",
+      "Trademark protection for digital brands"
+    ],
+    icon: "fas fa-briefcase"
+  }
+];
+const testimonials = [
+  {
+    quote: "The team at Digital Rights Law Group transformed our approach to digital protection. Their expertise saved us from potential legal disasters.",
+    author: "Sarah Johnson",
+    role: "CEO, TechStart Inc."
+  },
+  {
+    quote: "Professional, responsive, and incredibly knowledgeable. They helped us navigate complex copyright issues with ease.",
+    author: "Michael Chen",
+    role: "Creative Director, Artisan Studios"
+  },
+  {
+    quote: "Their strategic approach to digital rights has given us peace of mind and confidence in our online presence.",
+    author: "Emily Rodriguez",
+    role: "Founder, Digital Innovations LLC"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="relative overflow-hidden">
+    {/* Hero Section */}
+    <div class="bg-gradient-to-br from-primary to-[#003366] text-white py-20 md:py-32">
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+          <p class="text-xl md:text-2xl text-blue-100 mb-8">Expert Legal Guidance in Digital Rights and Copyright Protection</p>
+          <p class="text-lg text-blue-50 max-w-2xl mx-auto">
+            Discover our comprehensive legal services designed to protect your digital assets and online presence.
+          </p>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    </div>
+    
+    {/* Services Section */}
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Specialized Legal Solutions</h2>
+          <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            At Digital Rights Law Group, we specialize in navigating the complex landscape of digital law to protect your intellectual property and online rights.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              class="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-accent">
+                <i class={`${service.icon} text-2xl`}></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-3">{service.title}</h3>
+              <p class="text-gray-600 mb-6">{service.description}</p>
+              <ul class="space-y-3">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} class="flex items-start">
+                    <i class="fas fa-check-circle text-accent mt-1 mr-2 flex-shrink-0"></i>
+                    <span class="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    {/* About Section */}
+    <section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+            <div class="relative">
+              <div class="bg-gradient-to-br from-primary to-[#003366] rounded-2xl w-full h-96"></div>
+              <div class="absolute -bottom-6 -right-6 bg-accent rounded-2xl w-32 h-32"></div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Expert Legal Services in Digital Rights</h2>
+            <p class="text-lg text-gray-700 mb-6">
+              At Digital Rights Law Group, we specialize in navigating the complex landscape of digital law. Our team of experienced attorneys provides tailored solutions to protect your intellectual property, defend your online rights, and ensure compliance in the digital age.
+            </p>
+            <p class="text-lg text-gray-700 mb-8">
+              With a commitment to accessibility and excellence, we empower individuals and businesses to thrive securely in the digital world.
+            </p>
+            <div class="flex items-center">
+              <div class="flex -space-x-3">
+                <div class="w-10 h-10 rounded-full bg-blue-500 border-2 border-white"></div>
+                <div class="w-10 h-10 rounded-full bg-accent border-2 border-white"></div>
+                <div class="w-10 h-10 rounded-full bg-primary border-2 border-white"></div>
+              </div>
+              <p class="ml-4 text-gray-600">Trusted by 500+ clients across industries</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {/* Testimonials */}
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
+          <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Hear from professionals who have experienced our commitment to excellence in digital rights protection.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100">
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-[#003366] flex items-center justify-center text-white font-bold text-lg">
+                  {testimonial.author.charAt(0)}
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-bold text-primary">{testimonial.author}</h4>
+                  <p class="text-gray-600 text-sm">{testimonial.role}</p>
+                </div>
+              </div>
+              <p class="text-gray-700 italic">"{testimonial.quote}"</p>
+              <div class="flex mt-4">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} class="fas fa-star text-yellow-400"></i>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    {/* CTA Section */}
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-[#003366] text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Protect Your Digital Rights?</h2>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">
+          Our expert legal team is ready to help you navigate the complexities of digital law with confidence.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="bg-accent hover:bg-[#ff5252] text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105">
+            Schedule a Consultation
+          </a>
+          <a href="/contact" class="bg-transparent hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full border-2 border-white transition duration-300">
+            Contact Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .gradient-border {
+    position: relative;
+    border-radius: 0.75rem;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #001f4d, #ff6b6b, #001f4d);
+    border-radius: 0.75rem;
+    z-index: -1;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .feature-card {
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<script>
+  // Simple animation for cards on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.feature-card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 100);
+      }, index * 100);
+    });
+  });
+</script>

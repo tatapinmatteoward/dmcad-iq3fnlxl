@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Testimonials - DMCA Defense Network";
+const pageDescription = "Discover real stories from creators who protected their intellectual property with our expert DMCA defense strategies. Empower your creative journey today.";
+
+const testimonials = [
+  {
+    id: 1,
+    content: "DMCA Defense Network turned a nightmare takedown into a swift victory. Their step-by-step strategy not only restored my content but also strengthened my online presence. Highly recommend!",
+    author: "Alex Rivera",
+    role: "Independent Filmmaker & YouTuber",
+    avatar: "AR"
+  },
+  {
+    id: 2,
+    content: "As a digital artist, facing multiple false claims was overwhelming. The team's authoritative approach and quick response resolved everything in days. True experts in DMCA defense.",
+    author: "Jordan Lee",
+    role: "Visual Artist & NFT Creator",
+    avatar: "JL"
+  },
+  {
+    id: 3,
+    content: "Their minimalist yet powerful strategies helped me navigate complex copyright issues with confidence. The team's professionalism and attention to detail made all the difference in protecting my work.",
+    author: "Taylor Kim",
+    role: "Musical Producer & Composer",
+    avatar: "TK"
+  },
+  {
+    id: 4,
+    content: "I was stressed about my content being removed without proper justification. The DMCA Defense Network quickly analyzed the situation and provided a clear action plan. They're truly champions of creator rights.",
+    author: "Maria Santos",
+    role: "Podcast Host & Content Creator",
+    avatar: "MS"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-primary to-accent py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 right-0 w-48 h-48 bg-white rounded-full translate-x-1/2 translate-y-1/2"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+          What Our Clients Say
+        </h1>
+        <p class="text-xl text-white/90 font-sans max-w-2xl mx-auto">
+          Hear from creators who've successfully defended their intellectual property with our expert DMCA defense strategies
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-serif font-bold text-primary mb-4">Real Stories from Real Creators</h2>
+      <div class="w-24 h-1 bg-accent mx-auto"></div>
+      <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+        At DMCA Defense Network, we empower creators like you to safeguard your work against infringement. 
+        Don't just take our word for it—hear from those who've successfully defended their rights with our expert guidance.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {testimonials.map((testimonial) => (
+        <div 
+          key={testimonial.id}
+          class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-100"
+        >
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                {testimonial.avatar}
+              </div>
+              <div class="ml-4">
+                <h3 class="font-bold text-gray-900">{testimonial.author}</h3>
+                <p class="text-sm text-gray-600">{testimonial.role}</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">"{testimonial.content}"</p>
+          </div>
+          <div class="px-6 py-4 bg-gray-50 border-t border-gray-100">
+            <div class="flex">
+              {[...Array(5)].map((_, i) => (
+                <i key={i} class="fas fa-star text-yellow-400"></i>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-16 bg-gradient-to-r from-primary/5 to-accent/5">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="relative">
+          <div class="absolute -top-6 left-0 w-12 h-12 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </div>
+          <blockquote class="text-2xl md:text-3xl font-serif italic text-gray-800 mb-6 px-12">
+            "Our mission is to create a world where creators can focus on their art, not on legal battles. 
+            Every story we hear reinforces our commitment to this cause."
+          </blockquote>
+          <p class="text-lg font-semibold text-primary">- The DMCA Defense Network Team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-6">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">98%</div>
+          <p class="text-gray-600">Success Rate</p>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">10K+</div>
+          <p class="text-gray-600">Content Protected</p>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">24h</div>
+          <p class="text-gray-600">Average Response Time</p>
+        </div>
+        <div class="p-6">
+          <div class="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+          <p class="text-gray-600">Happy Creators</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .testimonial-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #2e7d32, #00695c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

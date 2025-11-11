@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "DMCA Defense Network - Home";
+const pageDescription = "Empowering creators with expert DMCA defense strategies to protect your intellectual property and fight copyright infringement effectively.";
+
+const benefits = [
+  {
+    title: "Expert Consultation",
+    description: "Personalized advice from DMCA specialists.",
+    icon: "fas fa-user-tie"
+  },
+  {
+    title: "Counter-Notice Support",
+    description: "Step-by-step guidance for filing counter-notices.",
+    icon: "fas fa-file-alt"
+  },
+  {
+    title: "Community Shield",
+    description: "Join a network of creators defending their rights.",
+    icon: "fas fa-users"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "The DMCA Defense Network helped me navigate a complex takedown notice and successfully protected my content.",
+    author: "Sarah Johnson",
+    role: "Content Creator"
+  },
+  {
+    quote: "As a small business owner, I was terrified of copyright claims. This network gave me the tools to defend myself.",
+    author: "Michael Chen",
+    role: "Entrepreneur"
+  },
+  {
+    quote: "The consultation service was invaluable in helping me understand my rights and options.",
+    author: "Alex Rivera",
+    role: "Digital Artist"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="min-h-screen">
+    {/* Hero Section */}
+    <section class="relative bg-gradient-to-br from-primary to-accent py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-10"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+            DMCA Defense Network
+          </h1>
+          <p class="text-xl md:text-2xl text-white/90 mb-10 font-light tracking-wide">
+            Empowering Creators with Expert DMCA Defense Strategies
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Get Expert Guidance
+            </button>
+            <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-3 px-8 rounded-full transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Why DMCA Defense Matters */}
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+            Why DMCA Defense Matters
+          </h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            The Digital Millennium Copyright Act (DMCA) is a powerful tool for rights holders—but it can be misused. 
+            As a creator, you deserve protection from false claims that silence your voice.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div class="text-accent text-4xl mb-4">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Protect Your Voice</h3>
+            <p class="text-gray-600">
+              Safeguard your creative work from unfounded claims that could threaten your online presence and livelihood.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div class="text-accent text-4xl mb-4">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Legal Expertise</h3>
+            <p class="text-gray-600">
+              Access professional guidance from experts who understand the nuances of DMCA law and enforcement.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+            <div class="text-accent text-4xl mb-4">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Community Support</h3>
+            <p class="text-gray-600">
+              Connect with fellow creators who share your commitment to fair play and intellectual property rights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Key Benefits */}
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+            Key Benefits
+          </h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Comprehensive protection and support to keep your creative work safe and your rights intact.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="text-accent text-5xl mb-6">
+                <i class={benefit.icon}></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+              <p class="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Testimonials */}
+    <section class="py-20 bg-gradient-to-b from-white to-primary/5">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+            Creator Stories
+          </h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Hear from creators who have successfully navigated DMCA challenges with our support.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div class="text-yellow-400 text-2xl mb-4">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="text-gray-700 italic mb-6">"{testimonial.quote}"</p>
+              <div>
+                <p class="font-bold text-gray-900">{testimonial.author}</p>
+                <p class="text-gray-600 text-sm">{testimonial.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* CTA Section */}
+    <section class="py-20 bg-gradient-to-r from-primary to-accent">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+            Ready to Protect Your Creative Work?
+          </h2>
+          <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            Join our network of empowered creators and get expert guidance today. Your voice deserves to be heard.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="bg-white text-primary hover:bg-gray-100 font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Start Your Defense Journey
+            </button>
+            <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-4 px-10 rounded-full transition-all duration-300">
+              Contact Our Experts
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #2e7d32 0%, #00695c 100%);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  
+  .custom-hover {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+</style>

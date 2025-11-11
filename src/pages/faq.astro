@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "FAQ - DMCA Defense Network";
+const pageDescription = "Find answers to common questions about DMCA notices, copyright protection, and our expert defense strategies for creators.";
+
+const faqItems = [
+  {
+    question: "What is the DMCA?",
+    answer: "The Digital Millennium Copyright Act (DMCA) is a U.S. law enacted in 1998 that addresses online copyright infringement. It provides a framework for copyright owners to request the removal of infringing content from websites and platforms. Key components include takedown notices and counter-notices, which allow accused parties to respond and potentially restore their content."
+  },
+  {
+    question: "How does DMCA Defense Network help creators?",
+    answer: "We specialize in expert DMCA defense strategies, offering services that protect your intellectual property rights through comprehensive legal support, expert consultation, and proactive measures to safeguard your creative works from unauthorized use."
+  },
+  {
+    question: "What makes your DMCA defense different?",
+    answer: "Our approach combines deep legal expertise with industry-specific knowledge. We understand the nuances of online content distribution and provide tailored solutions that address your unique challenges, from initial notice response to full legal representation when needed."
+  },
+  {
+    question: "How quickly can you respond to a DMCA notice?",
+    answer: "We offer rapid response services with initial consultations within 24 hours. Our streamlined processes ensure that you receive expert guidance as quickly as possible to protect your content and respond effectively to any DMCA takedown notices."
+  },
+  {
+    question: "Do you handle international copyright issues?",
+    answer: "Yes, our expertise extends beyond U.S. copyright law to include international protection strategies. We understand global copyright frameworks and work with international partners to provide comprehensive protection for creators operating worldwide."
+  },
+  {
+    question: "What types of content do you defend?",
+    answer: "We defend all forms of creative content including digital media, written works, music, software, designs, and any intellectual property that might be subject to DMCA takedown notices."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10"></div>
+    <div class="relative container mx-auto px-4 py-16 md:py-24">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Frequently Asked Questions</h1>
+        <p class="text-xl text-gray-600 mb-8">Welcome to the DMCA Defense Network FAQ. We're here to empower creators like you with clear, actionable insights into protecting your intellectual property.</p>
+        <p class="text-gray-600 mb-12">If you don't find your answer here, <a href="/contact" class="text-accent hover:underline font-medium">contact us</a> for personalized assistance.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="container mx-auto px-4 py-12 md:py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {faqItems.map((item, index) => (
+          <div 
+            key={index}
+            class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100"
+          >
+            <div class="p-6 md:p-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <i class="fas fa-question text-primary"></i>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3">{item.question}</h3>
+                  <p class="text-gray-600 leading-relaxed">{item.answer}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-r from-primary to-accent">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Need More Help?</h2>
+        <p class="text-primary-100 text-lg mb-10 max-w-2xl mx-auto">Our team of copyright experts is ready to provide personalized assistance for your specific situation.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/contact" class="px-8 py-4 bg-white text-primary font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1">
+            Contact Our Experts
+          </a>
+          <a href="/resources" class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition duration-300">
+            View Resources
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary mb-4">DMCA Defense Network</h2>
+          <p class="text-xl text-gray-600">Empowering Creators with Expert DMCA Defense Strategies</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-md text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-shield-alt text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Protection First</h3>
+            <p class="text-gray-600">We prioritize protecting your creative works with comprehensive strategies that prevent unauthorized use.</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-xl shadow-md text-center">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-lightbulb text-accent text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Guidance</h3>
+            <p class="text-gray-600">Our team brings years of experience in copyright law to provide actionable solutions for creators.</p>
+          </div>
+          
+          <div class="bg-white p-8 rounded-xl shadow-md text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-bolt text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Rapid Response</h3>
+            <p class="text-gray-600">Quick action when issues arise with our streamlined processes and dedicated support team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .faq-card:hover {
+    transform: translateY(-5px);
+  }
+</style>

@@ -1,0 +1,22 @@
+---
+const currentYear = new Date().getFullYear();
+const socialLinks = [
+  { icon: 'fab fa-twitter', url: '#' },
+  { icon: 'fab fa-facebook', url: '#' },
+  { icon: 'fab fa-instagram', url: '#' },
+  { icon: 'fab fa-linkedin', url: '#' }
+];
+---
+
+<footer class="bg-gradient-to-r from-[#2e7d32] to-[#00695c] text-white py-8">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-sm">&copy; {currentYear} DMCA Defense Network. All rights reserved.</p>
+    <div class="flex justify-center gap-4 mt-4">
+      {socialLinks.map((link) => (
+        <a href={link.url} class="hover:text-gray-200 transition-colors duration-200">
+          <i class={link.icon}></i>
+        </a>
+      ))}
+    </div>
+  </div>
+</footer>
